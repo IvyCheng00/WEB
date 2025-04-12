@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人履歷 - [你的名字]</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 首頁 -->
+    <section id="home">
+        <h1>CHENG TING-YU</h1>
+        <p class="tagline">Crafted in Code, Styled with Soul, Powered by AI, Fueled by Imagination.<br><span class="tagline-sub"></span></p>
+        <img src="image/home_2.png" alt="個人照片" class="home-image">
+        <nav>
+            <select id="page-select" onchange="showPageFromSelect()">
+                <option value="" disabled selected>start exploration</option>
+                <option value="education">學歷 Education</option>
+                <option value="research">研究領域 Reserch Area</option>
+                <option value="skills">技能 Skills</option>
+                <option value="experience">經歷 Experience</option>
+                <option value="certification">證照 Certifications</option>
+                <option value="achievements">學術成就 Achievements</option>
+                    <option value="language">語言能力 Language</option>
+                <!-- <option value="resume">單頁履歷 Resume</option> -->
+                <!-- <option value="portfolio">作品集</option> -->
+                <!-- <option value="contact">聯絡方式 Contact</option> -->
+            </select>
+        </nav>
+        <div class="social-buttons">
+            <!-- LinkedIn 按鈕 -->
+            <div class="social-item">
+                <a href="https://www.linkedin.com/in/ting-yu-cheng-67b85a252" target="_blank" class="circle-btn linkedin">
+                    <img src="image/LK.png" alt="LinkedIn">
+                </a>
+                <p>LinkedIn</p>
+                <p class="message">www.linkedin.com/in/ting-yu-cheng-67b85a252</p> <!-- 這行預設隱藏 -->
+            </div> 
+            
+            <!-- Gmail 按鈕 -->
+            <div class="social-item">
+                <a href="mailto:ivycheng1002@gmail.com" class="circle-btn gmail">
+                    <img src="image/GM.png" alt="Gmail">
+                </a>
+                <p>Email</p>
+                <p class="message">ivycheng1002@gmail.com</p>
+            </div>
+            
+            <!-- 手機號碼 按鈕 -->
+            <div class="social-item">
+                <a href="tel:+886976066613" class="circle-btn phone">
+                    <img src="image/PN.png" alt="Phone">
+                </a>
+                <p>Phone</p>
+                <p class="message">0976066613</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 各個區塊 (初始時隱藏) -->
+<!--教育 /////////////////////////////////////////////////////////////////////////////////// -->
+<section id="education" class="hidden">
+    <h2>EDUCATION</h2>
+
+    <div class="edu-block">
+        <img src="image/ntnu.png" alt="NTNU" class="edu-icon">
+        <div class="edu-text">
+            <strong>碩士學位 Master of Engineering (M.Eng.)</strong><br>
+            國立臺灣師範大學 National Taiwan Normal University<br>
+            電機研究所 Electrical Engineering<br>
+            2023–Present
+        </div>
+    </div>
+
+    <div class="edu-block">
+        <img src="image/ntnu.png" alt="NTNU" class="edu-icon">
+        <div class="edu-text">
+            <strong>學士學位 Bachelor of Engineering (B.Eng.)</strong><br>
+            國立臺灣師範大學 National Taiwan Normal University<br>
+            電機工程學系 Electrical Engineering<br>
+            2019–2023
+        </div>
+    </div>
+
+    <div class="edu-block">
+        <img src="image/kghs.png" alt="KGHS" class="edu-icon">
+        <div class="edu-text">
+            <strong>高中學歷 High School Diploma</strong><br>
+            高雄市立高雄女子高級中學 Kaohsiung Girls' Senior High School<br>
+            2016–2019
+        </div>
+    </div>
+
+    <div class="footer-content">
+        <p class="footer-quote">Crafted in Code, Styled with Soul, Powered by AI, Fueled by Imagination.</p>
+        <img src="image/home.png" alt="Vintage Footer Decoration" class="footer-img">
+      </div>
+      
+    <button onclick="goHome()">⇚</button>
+</section>
+
+
+
+
+
+<!--研究領域 /////////////////////////////////////////////////////////////////////////////////// -->
+<section id="research" class="hidden">
+    <h2>RESEARCH AREA</h2>
+
+    <div class="research-top">
+        <img src="image/res1.png" alt="Research 1" class="research-img">
+        <img src="image/res2.png" alt="Research 2" class="research-img">
+        <img src="image/res3.png" alt="Research 3" class="research-img">
+    </div>
+
+    <div class="research-text">
+        <p>
+            研究方向聚焦於生成式人工智慧（Generative AI）與跨模態應用（Multimodal Application），特別關注語言模型在圖像生成任務中的語意理解與邏輯推理能力。致力於探討模型在接收包含數量資訊的文字提示時，如何正確解讀並生成對應數量與樣式一致的圖像物件。
+            <br>
+            設計的架構結合了多模態大型語言模型（MMLLM）與思考鏈策略（Chain of Thought, CoT），將圖像生成任務拆解為語意理解、背景與物件生成、以及空間組裝等模組化流程，藉此提升語句的邏輯連貫性與生成圖像的數值準確性。此技術不僅能解決主流生成模型在處理「物件數量」時常見的錯誤，也為教育場景提供了新的應用方式。透過視覺化抽象數學概念（如加減法中的加數拆解），ANOVA 能幫助學生更直觀理解數學邏輯，尤其適合早期教育與特殊學習需求者。本研究同時也關注這類生成技術在實際應用中的可行性與穩定性，包括與使用者互動時的準確性與系統設計的可解釋性，期望未來能進一步將 AI 圖像生成技術應用於教育、創意設計、數位助理等多樣場域。
+        </p>
+        <p>
+            Research lies at the intersection of generative artificial intelligence (GAI) and multimodal application, with a particular interest in how language models interpret and reason about quantity information during image generation tasks.
+            <br>
+            The architecture, which leverages Multimodal Large Language Models (MMLLMs) and Chain of Thought (CoT) strategies to decompose complex text-to-image processes into distinct modules: prompt interpretation, background and object synthesis, and spatial arrangement. This modular pipeline significantly improves both the logical coherence of model reasoning and the numerical accuracy of generated visuals.Unlike many current T2I systems that struggle with object count fidelity, ANOVA ensures precise generation of user-specified quantities while maintaining consistent visual style. This enables its use in educational settings, where visual clarity and numerical correctness are essential — for example, helping students visualize arithmetic problems using color-coded objects, improving accessibility for young learners and students with special needs.Beyond technical accuracy, the research also explores the broader usability and reliability of such systems in real-world applications — from educational tools to human-computer interaction — with the goal of building explainable, responsive, and context-aware multimodal AI systems.
+        </p>
+    </div>
+    <div class="footer-content">
+        <p class="footer-quote">Crafted in Code, Styled with Soul, Powered by AI, Fueled by Imagination.</p>
+        <img src="image/home.png" alt="Vintage Footer Decoration" class="footer-img">
+      </div>
+      
+    <button onclick="goHome()">⇚</button>
+</section>
+
+
+
+
+
+
+
+
+<!--技能 /////////////////////////////////////////////////////////////////////////////////// -->
+<section id="skills" class="hidden">
+    <h2>SKILLS</h2>
+  
+    <div class="skills-grid">
+  
+      <!-- Skill 1 -->
+      <div class="skill-item">
+        <div class="skill-circle">
+          <div class="skill-icon pulse">🧠</div>
+          <strong>生成式AI<br>Generative AI</strong>
+          <ul>
+            <li>Prompt Engineering</li>
+            <li>MMLLM</li>
+            <li>RAG</li>
+            <li>API Integration</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Skill 2 -->
+      <div class="skill-item">
+        <div class="skill-circle">
+          <div class="skill-icon pulse">💻</div>
+          <strong>程式語言<br>Programming</strong>
+          <ul>
+            <li>Python</li>
+            <li>C++</li>
+            <li>Verilog</li>
+            <li>MATLAB</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Skill 3 -->
+      <div class="skill-item">
+        <div class="skill-circle">
+          <div class="skill-icon pulse">📊</div>
+          <strong>機器學習<br>Machine Learning</strong>
+          <ul>
+            <li>PyTorch</li>
+            <li>TensorFlow</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Skill 4 -->
+      <div class="skill-item">
+        <div class="skill-circle">
+          <div class="skill-icon pulse">🌐</div>
+          <strong>網頁開發<br>Web Development</strong>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Flask</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Skill 5 -->
+      <div class="skill-item">
+        <div class="skill-circle">
+          <div class="skill-icon pulse">🧰</div>
+          <strong>其他技能<br>Others</strong>
+          <ul>
+            <li>專案管理</li>
+            <li>專利檢索</li>
+            <li>影片剪輯</li>
+          </ul>
+        </div>
+      </div>
+  
+    </div>
+      
+    <!-- <div class="footer-content">
+        <p class="footer-quote">Crafted in Code, Styled with Soul, Powered by AI, Fueled by Imagination.</p>
+        <img src="image/home.png" alt="Vintage Footer Decoration" class="footer-img">
+    </div> -->
+    <button onclick="goHome()">⇚</button>
+  </section>
+  
+
+
+
+
+
+
+
+
+
+
+<!--經歷 /////////////////////////////////////////////////////////////////////////////////// -->
+<section id="experience" class="hidden">
+    <h2>EXPERIENCE</h2>
+
+    <div class="experience-entry">
+        <div class="year-tag">2025</div>
+        <p>
+            <strong>📢 專案負責人 Project Lead
+                <span class="role-badge">2024.10–2025.01</span>
+            </strong><br>
+            ✿善科基金會、日月光半導體製造股份有限公司 SanCode Foundation & ASE, Inc<br>
+            ✿環保永續課題探索體驗計畫 Technology Youth Environmental Sustainability Exploration Project<br>
+
+            ⇝負責規劃並細化整體時間軸與各階段工作項目，將原始構想轉化為具體可執行的行動方案，並設定各階段KPI，確保團隊有清楚目標與時間壓力。
+            Led the end-to-end planning of the project, translating broad goals into concrete action plans with well-defined deliverables and KPIs to ensure team alignment and timely execution.<br>
+            
+            ⇝監督專案執行過程中各項工作進展，進行問題排除，以維持輸出成果的一致性與專業性。
+            Maintained strict oversight on progress , conducted ongoing risk assessments to ensure consistent and professional project output.<br>
+            
+            ⇝設計與執行有效溝通與回報制度，讓團隊成員隨時掌握整體專案脈絡，同時對外部單位提供透明回饋。
+            Developed communication routines including weekly updates and milestone reviews, fostering internal clarity and delivering transparent reporting to stakeholders.<br>
+            
+            ⇝針對教材設計、AI概念解釋與教學呈現方式提供策略建議與技術支援，幫助團隊成員突破挑戰。
+            Offered strategic and technical support in areas like curriculum design, concept simplification, and instructional strategy to help team members overcome challenges efficiently.<br>
+        </p>
+    </div>
+
+    <div class="experience-entry">
+        <div class="year-tag">2024</div>
+        <p>
+            <strong>🎤 研究者與發表人 Researcher & Presenter
+                <span class="role-badge">2024.11</span>
+            </strong><br>
+            ✿ICAST 國際研討會 ICAST Conference<br>
+
+            ⇝進行跨模態生成模型的研究，設計生成系統處理圖像生成中「物件數量」精準呈現的能力，並確認其準確性。
+            Conducted empirical research on multimodal generative models, evaluating their capacity to represent object quantity accurately during semantic-to-visual transformation.<br>
+
+            ⇝撰寫〈From Text to Visuals: Leveraging Language Models for Accurate Object Quantity in Image Generation〉一文，從模型架構、輸出結果呈現等面向探討其應用。
+            Authored a paper "From Text to Visuals: Leveraging Language Models for Accurate Object Quantity in Image Generation", exploring its applications from the perspectives of model architecture and output representation.<br>
+
+            ⇝在ICAST國際研討會上進行論文簡報與發表成果，並進行現場問答與學術研究者們互動。
+            Delivered a formal presentation of the research at the ICAST International Conference, participated in a live Q&A session, and engaged in in-depth academic exchange with international researchers.<br>
+        </p>
+    </div>
+
+    <div class="experience-entry">
+        <div class="year-tag">2024</div>
+        <p>
+            <strong>👩‍🏫 AIoT 講師 AIoT Instructor
+                <span class="role-badge">2024.04–2024.07</span>
+            </strong><br>
+            ✿瑞昱半導體股份有限公司 Realtek Semiconductor Corp.<br>
+            ✿支持高中「蟹逅物聯網」AIoT 教材編撰與推廣計畫 Realtek Semiconductor Corp.<br>
+
+            ⇝針對高中學生設計與教授AIoT核心理論課程，涵蓋AI、IoT與系統整合的基本概念。
+            Designed and delivered foundational courses tailored for high school students, covering core AIoT concepts.<br>
+
+            ⇝透過Python程式語言引導學生進行實作，帶領學生動手實作，並指導如何解決錯誤邏輯的問題。
+            Guided students through practical exercises using Python, emphasizing problem-solving strategies and debugging techniques.<br>
+
+            ⇝幫助學生從日常生活理解AIoT運作原理與應用潛力，培養整合式思考模式。
+            Integrated knowledge from physics, computer science, and engineering to cultivate students’ ability to approach AIoT challenges from multiple perspectives.<br>
+        </p>
+    </div>
+
+    <div class="experience-entry">
+        <div class="year-tag">2024</div>
+        <p>
+            <strong>📘 AIoT 課程開發者
+                <span class="role-badge">2024.01–2024.04</span>
+            </strong><br>
+            ✿瑞昱半導體股份有限公司 Realtek Semiconductor Corp.<br>
+            ✿支持高中「蟹逅物聯網」AIoT 教材編撰與推廣計畫 Realtek Semiconductor Corp.<br>
+
+            ⇝規劃並撰寫高中AIoT教材內容，將AI與IoT知識重構為適合高中程度的教材，並設計具情境性、易於理解的案例教學模式。
+            Restructured highly technical AI and IoT concepts into accessible, scenario-based educational materials tailored for high school learners.<br>
+
+            ⇝設計並開發互動實作練習，讓學生透過操作強化概念吸收與應用能力。
+            Developed hands-on modules to deepen student engagement and understanding.<br>
+
+            ⇝分析教案教學流程中的盲點，並調整教案內容的結構、說明方式與練習題型，提升整體教材的清晰度與教學效果。
+            Analyzed pain points in both conceptual understanding and practical execution, then revised the lesson plans by restructuring content flow, refining instructional language, and adapting practice exercises to improve clarity and enhance overall learning effectiveness.<br>
+
+            ⇝協助建立課程文件的版本管理與修正紀錄機制，提升後續維護與傳承的便利性。
+            Implemented a version control system for instructional materials, enabling structured updates and easier handover for future iterations.<br>
+        </p>
+    </div>
+
+    <div class="experience-entry fade-in">
+        <div class="year-tag">2019</div>
+        <p>
+            <strong>🎪 財務部部長 & 活動組織者 Finance Manager & Event Coordinator
+                <span class="role-badge">2019.09</span>
+            </strong><br>
+            ✿電機系學會 SA of Department of Electrical Engineering<br>
+
+            ⇝管理學會年度預算與資金流向，負責規劃、核銷與追蹤各項活動支出，確保財務透明且每筆支出都有明確用途與紀錄。
+            Oversaw the planning, disbursement, and tracking of the student association’s annual budget, ensuring transparency and accountability for all expenditures.<br>
+
+            ⇝主導活動的籌備與執行，從時程安排、人力調度到現場管理，協調整體活動企劃與執行。
+            Led the planning and execution of large-scale events such as orientations, seminars, and competitions, managing logistics and team coordination.<br>
+
+            ⇝執行財務報表、活動紀錄標準化與資料歸檔制度，保持可持續運作的行政機制。
+            Implemented standardized systems for financial reporting, event documentation, and data archiving to ensure sustainable and organized administrative operations.<br>
+        </p>
+    </div>
+
+    <div class="footer-content">
+        <p class="footer-quote">Crafted in Code, Styled with Soul, Powered by AI, Fueled by Imagination.</p>
+        <img src="image/home.png" alt="Vintage Footer Decoration" class="footer-img">
+      </div>
+      
+    <button onclick="goHome()">⇚</button>
+</section>
+
+
+
+
+
+
+
+<!--證照 /////////////////////////////////////////////////////////////////////////////////// -->
+<section id="certification" class="hidden">
+    <h2>CERTIFICATION</h2>
+
+    <div class="certification-grid">
+        <!-- 左邊證照 -->
+        <div class="cert-card horizontal">
+            <img src="image/cer_practitioner.png" alt="Practitioner" class="cert-img">
+            <div class="cert-text">
+                <strong>AI Practitioner</strong><br>
+                Amazon Web Services (AWS) <br>
+                2024.<br><br>
+                - AI and ML on AWS-Foundation<br>
+                - Amazon Web Services<br>
+                - Artificial Intelligence (AI)<br>
+                - AWS Cloud<br>
+                - Generative AI<br>
+                - Machine Learning (ML)<br>
+            </div>
+        </div>
+
+        <!-- 右邊證照 -->
+        <div class="cert-card horizontal">
+            <img src="image/cer_adopter.png" alt="Adopter" class="cert-img">
+            <div class="cert-text">
+                <strong>AI Practitioner Early Adopter</strong><br>
+                Amazon Web Services (AWS) <br>
+                2024.<br><br>
+                - AI and ML on AWS-Foundation<br>
+                - Amazon Web Services<br>
+                - Artificial Intelligence (AI)<br>
+                - AWS Cloud<br>
+                - Machine Learning (ML)<br>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-content">
+        <p class="footer-quote">Crafted in Code, Styled with Soul, Powered by AI, Fueled by Imagination.</p>
+        <img src="image/home.png" alt="Vintage Footer Decoration" class="footer-img">
+      </div>
+    <button onclick="goHome()">⇚</button>
+</section>
+
+
+
+
+
+
+
+
+
+<!--學術成就 /////////////////////////////////////////////////////////////////////////////////// -->
+<section id="achievements" class="hidden">
+    <h2>ACHIEVEMENTS</h2>
+
+    <div class="achievement-icon-card">
+        <span class="achievement-icon">🏆</span>
+        <div class="achievement-text">
+            <strong>優秀研究生 Outstanding Research Student</strong>
+            -113-1、113-2學期<br>
+            -國立臺灣師範大學電機所 NTNU EE
+        </div>
+    </div>
+
+    <div class="achievement-icon-card">
+        <span class="achievement-icon">🥈</span>
+        <div class="achievement-text">
+            <strong>團體第二名 Second Place</strong>
+            -2022<br>
+            -International Intelligent RoboSports Cup
+        </div>
+    </div>
+
+    <div class="footer-content">
+        <p class="footer-quote">Crafted in Code, Styled with Soul, Powered by AI, Fueled by Imagination.</p>
+        <img src="image/home.png" alt="Vintage Footer Decoration" class="footer-img">
+      </div>
+      
+    <button onclick="goHome()">⇚</button>
+</section>
+
+
+
+
+
+
+
+
+<!--語言能力 /////////////////////////////////////////////////////////////////////////////////// -->
+<section id="language" class="hidden">
+    <h2>LANGUAGE</h2>
+
+    <div class="language-grid">
+        <div class="lang-bar">
+            <p>
+                <strong>🗣️ 中文 Chinese</strong><br>
+                -母語者 Native Speake
+            </p>
+            <div class="bar">
+                <div class="fill" style="width: 100%;"></div>
+            </div>
+        </div>
+
+        <div class="lang-bar">
+            <p>
+                <strong>🗣️ 英文 English</strong><br>
+                -TOEIC 765
+            </p>
+            <div class="bar">
+                <div class="fill" style="width: 70%;"></div>
+            </div>
+        </div>
+
+        <div class="lang-bar">
+            <p>
+                <strong>🗣️ 韓文 Korean</strong><br>
+                -基本聽讀 Basic Comprehension
+            </p>
+            <div class="bar">
+                <div class="fill" style="width: 40%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-content">
+        <p class="footer-quote">Crafted in Code, Styled with Soul, Powered by AI, Fueled by Imagination.</p>
+        <img src="image/home.png" alt="Vintage Footer Decoration" class="footer-img">
+      </div>
+      
+    <button onclick="goHome()">⇚</button>
+</section>
+
+
+
+
+<!--單頁履歷 /////////////////////////////////////////////////////////////////////////////////// -->
+<!-- <section id="resume" class="hidden"> -->
+    <!-- <h2>RESUME</h2> -->
+    <!-- <img src="image/lan.png" alt="個人照片" class="lan-image"> -->
+    <!-- <div class="lan-box1"></div> -->
+    <!-- <div class="lan-box2"></div> -->
+    <!-- <div class="lan-box3"></div> -->
+    <!-- <p> -->
+        <!-- <strong>中文 Chinese</strong><br> -->
+        <!-- -母語者 Native Speake<br>
+        <br><br><br><br>
+        <strong>英文 English</strong><br>
+        -TOEIC 765<br>
+        <br><br><br><br>
+        <strong>韓文 Korean</strong><br>
+        -基本溝通 Basic Communication<br> -->
+    <!-- </p> -->
+    <!-- <button onclick="goHome()">⇚</button> -->
+<!-- </section> -->
+
+
+
+<!--照 /////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- <section id="portfolio" class="hidden"> -->
+        <!-- <h2>作品集</h2> -->
+        <!-- <p>這裡展示一些我的專案和作品。</p> -->
+        <!-- <button onclick="goHome()">HOME</button> -->
+    <!-- </section> -->
+
+    <!-- <section id="contact" class="hidden"> -->
+        <!-- <h2>聯絡我</h2> -->
+        <!-- <p>📧 Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p> -->
+        <!-- <button onclick="goHome()">HOME</button> -->
+    <!-- </section> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
